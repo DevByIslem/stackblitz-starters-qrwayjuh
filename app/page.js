@@ -1,3 +1,4 @@
+
 const skills = [
   "Python",
   "SQL",
@@ -17,44 +18,76 @@ const projects = [
   {
     number: "01",
     category: "DATA ANALYTICS",
-    title: "Data Analysis & Reporting",
+    title: "E-commerce Intelligence Dashboard",
     description:
-      "Data validation, quality checks, KPI analysis and interactive reporting to support business decisions.",
-    tools: ["SQL", "Power BI", "Excel"],
+      "An interactive business intelligence dashboard for sales analysis, KPI monitoring, revenue trends and product performance.",
+    tools: ["Python", "Streamlit", "SQLite", "Pandas", "Plotly"],
+    github:
+      "https://github.com/DevByIslem/ecommerce-intelligence-dashboard",
+    demo:
+      "https://ecommerce-intelligence-dashboard-u8mhvyw26ffxjqxnctnrqy.streamlit.app/",
   },
   {
     number: "02",
     category: "WEB DEVELOPMENT",
-    title: "Web Applications",
+    title: "Personal Portfolio",
     description:
-      "Web development focused on useful interfaces, data processing and practical application functionality.",
-    tools: ["Python", "Django", "JavaScript"],
+      "A modern portfolio built with Next.js and Tailwind CSS to showcase my technical skills and projects.",
+    tools: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
+    github:
+      "https://github.com/DevByIslem/stackblitz-starters-qrwayjuh",
+    demo: "",
   },
   {
     number: "03",
-    category: "DATA & AUTOMATION",
-    title: "Data Processing & Prediction",
+    category: "DATA ANALYSIS",
+    title: "Data Analysis & Reporting",
     description:
-      "Exploring data processing, automation and predictive analysis through practical projects.",
-    tools: ["Python", "SQL", "Data Analysis"],
+      "Experience in data validation, KPI analysis, reporting and data processing to support business decisions.",
+    tools: ["SQL", "Power BI", "Excel"],
+    github: "https://github.com/DevByIslem",
+    demo: "",
   },
 ];
 
+const socialLinks = {
+  github: "https://github.com/DevByIslem",
+  linkedin: "https://www.linkedin.com/in/islem-naimi/",
+};
+
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#080b12] text-slate-100">
+    <main
+      id="home"
+      className="min-h-screen overflow-hidden bg-[#080b12] text-slate-100"
+    >
       {/* Navigation */}
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#080b12]/90 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#080b12]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <a href="#home" className="text-2xl font-bold tracking-tight">
+          <a
+            href="#home"
+            className="text-2xl font-bold tracking-tight"
+            aria-label="Islem home"
+          >
             Islem<span className="text-blue-400">.</span>
           </a>
 
-          <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-            <a className="transition hover:text-blue-400" href="#about">About</a>
-            <a className="transition hover:text-blue-400" href="#skills">Skills</a>
-            <a className="transition hover:text-blue-400" href="#projects">Projects</a>
-            <a className="transition hover:text-blue-400" href="#contact">Contact</a>
+          <nav
+            aria-label="Main navigation"
+            className="hidden items-center gap-8 text-sm text-slate-300 md:flex"
+          >
+            <a className="transition hover:text-blue-400" href="#about">
+              About
+            </a>
+            <a className="transition hover:text-blue-400" href="#skills">
+              Skills
+            </a>
+            <a className="transition hover:text-blue-400" href="#projects">
+              Projects
+            </a>
+            <a className="transition hover:text-blue-400" href="#contact">
+              Contact
+            </a>
           </nav>
 
           <a
@@ -67,10 +100,7 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section
-        id="home"
-        className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-2 md:py-36"
-      >
+      <section className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-2 md:py-36">
         <div className="pointer-events-none absolute -left-40 top-16 h-80 w-80 rounded-full bg-blue-600/10 blur-[100px]" />
 
         <div className="relative">
@@ -90,7 +120,7 @@ export default function Home() {
           <p className="mt-7 max-w-xl text-lg leading-8 text-slate-400">
             I&apos;m Islem Naimi, a Data Analyst and Web Developer passionate
             about transforming data into actionable insights and building
-            useful digital solutions with Python, SQL, Power BI and modern
+            practical digital solutions with Python, SQL, Power BI and modern
             web technologies.
           </p>
 
@@ -99,7 +129,7 @@ export default function Home() {
               href="#projects"
               className="rounded-xl bg-blue-500 px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 hover:bg-blue-400"
             >
-              Explore my work <span aria-hidden="true">↗</span>
+              Explore my work ↗
             </a>
             <a
               href="#contact"
@@ -110,12 +140,13 @@ export default function Home() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-500">
-            <span>⌘ Data quality & reporting</span>
-            <span>⌘ Web applications</span>
+            <span>✦ Data quality & reporting</span>
+            <span>✦ Web applications</span>
+            <span>✦ Business intelligence</span>
           </div>
         </div>
 
-        {/* Profile card */}
+        {/* Profile Card */}
         <div className="relative">
           <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-blue-500/10 to-cyan-500/5 blur-2xl" />
 
@@ -129,6 +160,9 @@ export default function Home() {
                 <p className="mt-1 text-sm text-slate-400">
                   Data Analyst & Web Developer
                 </p>
+                <p className="mt-2 text-xs text-slate-500">
+                  Python · SQL · Business Intelligence
+                </p>
               </div>
             </div>
 
@@ -140,7 +174,9 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-500">Data Analytics</p>
-                    <p className="mt-1 font-medium">Insights & Visualization</p>
+                    <p className="mt-1 font-medium">
+                      Insights & Visualization
+                    </p>
                   </div>
                 </div>
               </div>
@@ -152,7 +188,9 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-500">Web Development</p>
-                    <p className="mt-1 font-medium">Applications & APIs</p>
+                    <p className="mt-1 font-medium">
+                      Applications & APIs
+                    </p>
                   </div>
                 </div>
               </div>
@@ -163,15 +201,36 @@ export default function Home() {
                 Core technologies
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Python", "SQL", "Power BI", "Django", "Next.js"].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-lg border border-slate-700 bg-slate-800/70 px-3 py-2 text-xs text-slate-300"
-                  >
-                    {item}
-                  </span>
-                ))}
+                {["Python", "SQL", "Power BI", "Django", "Next.js"].map(
+                  (item) => (
+                    <span
+                      key={item}
+                      className="rounded-lg border border-slate-700 bg-slate-800/70 px-3 py-2 text-xs text-slate-300"
+                    >
+                      {item}
+                    </span>
+                  )
+                )}
               </div>
+            </div>
+
+            <div className="mt-6 flex gap-3">
+              <a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 rounded-xl border border-slate-700 px-4 py-3 text-center text-sm text-slate-300 transition hover:border-blue-400 hover:text-blue-300"
+              >
+                GitHub ↗
+              </a>
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 rounded-xl border border-slate-700 px-4 py-3 text-center text-sm text-slate-300 transition hover:border-blue-400 hover:text-blue-300"
+              >
+                LinkedIn ↗
+              </a>
             </div>
           </div>
         </div>
@@ -211,7 +270,10 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="border-t border-slate-800/70 bg-slate-900/20">
+      <section
+        id="skills"
+        className="border-t border-slate-800/70 bg-slate-900/20"
+      >
         <div className="mx-auto max-w-6xl px-6 py-24">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
             Technical toolkit
@@ -220,7 +282,8 @@ export default function Home() {
             Skills & technologies
           </h2>
           <p className="mt-4 max-w-2xl leading-7 text-slate-400">
-            Technologies I use across analytics, data processing and web development.
+            Technologies I use across analytics, data processing and web
+            development.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
@@ -239,7 +302,9 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
                 01 / Analytics
               </p>
-              <h3 className="mt-4 text-xl font-semibold">Turning data into decisions</h3>
+              <h3 className="mt-4 text-xl font-semibold">
+                Turning data into decisions
+              </h3>
               <p className="mt-3 leading-7 text-slate-400">
                 Data validation, KPI analysis, reporting, visualization and
                 structured data processing.
@@ -250,7 +315,9 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-wider text-cyan-300">
                 02 / Development
               </p>
-              <h3 className="mt-4 text-xl font-semibold">Building practical tools</h3>
+              <h3 className="mt-4 text-xl font-semibold">
+                Building practical tools
+              </h3>
               <p className="mt-3 leading-7 text-slate-400">
                 Web interfaces, backend functionality, API integration and
                 database-driven applications.
@@ -272,8 +339,9 @@ export default function Home() {
                 Projects & experience
               </h2>
             </div>
+
             <a
-              href="https://github.com/DevByIslem"
+              href={socialLinks.github}
               target="_blank"
               rel="noreferrer"
               className="text-sm font-medium text-blue-300 transition hover:text-blue-200"
@@ -283,30 +351,33 @@ export default function Home() {
           </div>
 
           <p className="mt-5 max-w-2xl leading-7 text-slate-400">
-            An overview of my main technical areas. More detailed project
-            descriptions and repository links will be added as they are prepared.
+            Explore my dashboard, web development work and areas of technical
+            experience.
           </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <article
                 key={project.number}
-                className="group rounded-2xl border border-slate-800 bg-slate-900/30 p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-slate-900/70"
+                className="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/30 p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-slate-900/70"
               >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-3">
                   <span className="text-sm font-semibold text-blue-400">
                     {project.number}
                   </span>
-                  <span className="text-xs tracking-wider text-slate-500">
+                  <span className="text-right text-xs tracking-wider text-slate-500">
                     {project.category}
                   </span>
                 </div>
+
                 <h3 className="mt-7 text-xl font-semibold transition group-hover:text-blue-300">
                   {project.title}
                 </h3>
-                <p className="mt-4 min-h-28 leading-7 text-slate-400">
+
+                <p className="mt-4 flex-1 leading-7 text-slate-400">
                   {project.description}
                 </p>
+
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tools.map((tool) => (
                     <span
@@ -316,6 +387,28 @@ export default function Home() {
                       {tool}
                     </span>
                   ))}
+                </div>
+
+                <div className="mt-7 flex flex-wrap gap-3 border-t border-slate-800 pt-5">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition hover:border-blue-400 hover:text-blue-300"
+                  >
+                    GitHub ↗
+                  </a>
+
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center rounded-lg bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-400"
+                    >
+                      Live Demo ↗
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
@@ -330,21 +423,35 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
               Get in touch
             </p>
+
             <h2 className="mt-4 max-w-2xl text-3xl font-bold leading-tight md:text-5xl">
               Let&apos;s build something meaningful.
             </h2>
+
             <p className="mt-5 max-w-2xl leading-8 text-slate-400">
-              Interested in data analytics, reporting or web development?
-              Explore my GitHub profile and discover my technical work.
+              Interested in data analytics, business intelligence, reporting
+              or web development? Feel free to connect with me.
             </p>
-            <a
-              href="https://github.com/DevByIslem"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex rounded-xl bg-blue-500 px-6 py-3.5 font-semibold text-white transition hover:bg-blue-400"
-            >
-              Visit my GitHub ↗
-            </a>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex rounded-xl bg-blue-500 px-6 py-3.5 font-semibold text-white transition hover:bg-blue-400"
+              >
+                Connect on LinkedIn ↗
+              </a>
+
+              <a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex rounded-xl border border-slate-700 px-6 py-3.5 font-semibold text-slate-200 transition hover:border-blue-400 hover:text-blue-300"
+              >
+                Visit GitHub ↗
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -353,7 +460,7 @@ export default function Home() {
       <footer className="border-t border-slate-800/70">
         <div className="mx-auto flex max-w-6xl flex-col justify-between gap-3 px-6 py-7 text-sm text-slate-500 sm:flex-row">
           <p>© {new Date().getFullYear()} Islem Naimi</p>
-          <p>Data Analytics · Web Development · Next.js</p>
+          <p>Data Analytics · Business Intelligence · Web Development</p>
         </div>
       </footer>
     </main>
